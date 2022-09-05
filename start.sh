@@ -6,7 +6,7 @@ CADDYIndexPage=https://www.free-css.com/assets/files/free-css-templates/download
 VER=`wget -qO- "https://api.github.com/repos/XTLS/Xray-core/releases/latest" | sed -n -r -e 's/.*"tag_name".+?"([vV0-9\.]+?)".*/\1/p'`
 mkdir /xraybin && cd /xraybin
 XRAY_URL="https://github.com/XTLS/Xray-core/releases/download/${VER}/Xray-linux-64.zip"
-wget --quiet --no-check-certificate ${XRAY_URL}
+wget --no-check-certificate ${XRAY_URL}
 unzip -qq Xray-linux-64.zip
 rm -f Xray-linux-64.zip
 chmod +x ./xray
