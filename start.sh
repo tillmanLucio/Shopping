@@ -21,6 +21,8 @@ cat /config.json | sed -e "s/\$AUUID/$AUUID/g" >/xraybin/config.json
 # 启动tor程序
 tor &
 
+date +%F" "%T
+
 # 启动xray程序
 /xraybin/xray -config /xraybin/config.json &
 
